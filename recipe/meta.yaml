@@ -1,4 +1,4 @@
-{% set version = "0.0.5" %}
+{% set version = "0.1.1" %}
 
 package:
   name: supermercado
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/supermercado/supermercado-{{ version }}.tar.gz
-  sha256: "c0d7b8ce428681c597d3f3a51df8bc1b347a6cfc3c1d278a7e68fe6b991a5407"
+  sha256: f2310c00a7d151ffe60b9e817bec8f2c5ea8706f6080f685e3e3132eb3279327
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - supermercado = supermercado.scripts.cli:cli
 
@@ -41,7 +41,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "Supercharged mercantile"
+  summary: Supercharged mercantile
 
 extra:
   recipe-maintainers:
