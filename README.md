@@ -5,11 +5,9 @@ Home: https://github.com/mapbox/supermercado
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/supermercado-feedstock/blob/master/LICENSE.txt)
 
 Summary: Supercharged mercantile
-
-
 
 Current build status
 ====================
