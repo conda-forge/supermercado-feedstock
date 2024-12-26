@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/supermercado/supermercado-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/s/supermercado/supermercado-{{ version }}.tar.gz
   sha256: 639372b946c31d63196a8fc38dde7eafa4c28ba9472a7a754996eb43b9e8a69b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -17,10 +17,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - affine
     - click
     - click-plugins
@@ -30,6 +30,8 @@ requirements:
     - rasterio
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - supermercado
     - supermercado.scripts
