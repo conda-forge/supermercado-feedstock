@@ -1,4 +1,4 @@
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: supermercado
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/supermercado/supermercado-{{ version }}.tar.gz
-  sha256: 639372b946c31d63196a8fc38dde7eafa4c28ba9472a7a754996eb43b9e8a69b
+  sha256: d8cc7519cb25f1142ee0e7c9e40b9be9a5688c3ac1f90a87d165286c3bfe44b6
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
